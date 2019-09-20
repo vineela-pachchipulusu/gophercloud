@@ -14,15 +14,16 @@ import (
 )
 
 var (
-	invState          = "inventoried"
-	task              = "Unlocking"
-	standbyController = "Controller-Standby"
-	activeController  = "Controller-Active"
-	monitorFunction   = "monitor"
-	vboxLocation      = "vbox"
-	icewallLocation   = "The Ice Wall"
-	ottawaLocation    = "Ottawa, Canada"
-	HostHerp          = hosts.Host{
+	clockSynchronization = "ntp"
+	invState             = "inventoried"
+	task                 = "Unlocking"
+	standbyController    = "Controller-Standby"
+	activeController     = "Controller-Active"
+	monitorFunction      = "monitor"
+	vboxLocation         = "vbox"
+	icewallLocation      = "The Ice Wall"
+	ottawaLocation       = "Ottawa, Canada"
+	HostHerp             = hosts.Host{
 		ID:           "d99637e9-5451-45c6-98f4-f18968e43e91",
 		Hostname:     "controller-0",
 		Personality:  "controller",
@@ -51,6 +52,7 @@ var (
 		OperationalStatus:    "enabled",
 		AvailabilityStatus:   "online",
 		InventoryState:       &invState,
+		ClockSynchronization: &clockSynchronization,
 	}
 	HostDerp = hosts.Host{
 		ID:           "f73dda8e-be3c-4704-ad1e-ed99e44b846e",
@@ -129,6 +131,7 @@ const HostsListBody = `
         "Personality": "Controller-Active",
         "stor_function": "monitor"
       },
+      "clock_synchronization": "ntp",
       "config_applied": "53296bf3-d205-4675-8c57-411c875c164e",
       "config_status": "Config out-of-date",
       "config_target": "2da20c19-2157-4231-b9b3-194175e7dad0",
@@ -192,6 +195,7 @@ const HostsListBody = `
         "Personality": "Controller-Standby",
         "stor_function": "monitor"
       },
+      "clock_synchronization": null,
       "config_applied": "2491d46f-d3ad-4460-981f-f86dc5a8bf6c",
       "config_status": "Config out-of-date",
       "config_target": "dd798e27-362e-49e7-9dc3-4e8ef7d0aa59",
@@ -255,6 +259,7 @@ const HostsListBody = `
         "Personality": null,
         "stor_function": "monitor"
       },
+      "clock_synchronization": null,
       "config_applied": null,
       "config_status": null,
       "config_target": null,
@@ -323,6 +328,7 @@ const SingleHostBody = `
         "Personality": "Controller-Standby",
         "stor_function": "monitor"
       },
+      "clock_synchronization": null,
       "config_applied": "2491d46f-d3ad-4460-981f-f86dc5a8bf6c",
       "config_status": "Config out-of-date",
       "config_target": "dd798e27-362e-49e7-9dc3-4e8ef7d0aa59",
