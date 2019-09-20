@@ -17,7 +17,6 @@ var (
 	NTPHerp   = ntp.NTP{
 		ID:         "4a667701-fcca-448e-9cdb-c02df956920d",
 		NTPServers: "0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org",
-		Enabled:    true,
 		SystemID:   "5af5f7e5-1eea-4e76-b539-ac552e132e47",
 		CreatedAt:  "2019-08-07T14:40:00.095712+00:00",
 		UpdatedAt:  &updatedAt,
@@ -25,7 +24,6 @@ var (
 	NTPDerp = ntp.NTP{
 		ID:         "92939488-6f53-4913-aa15-ce89162751c6",
 		NTPServers: "0.pool.ntp.org",
-		Enabled:    false,
 		SystemID:   "11e0c25d-80ff-4cdb-b20d-eac604469a87",
 		CreatedAt:  "2019-08-07T14:40:00.095712+00:00",
 		UpdatedAt:  nil,
@@ -37,7 +35,6 @@ const NTPListBody = `
   "intps": [
     {
       "created_at": "2019-08-07T14:40:00.095712+00:00",
-      "enabled": true,
       "isystem_uuid": "5af5f7e5-1eea-4e76-b539-ac552e132e47",
       "links": [
         {
@@ -55,7 +52,6 @@ const NTPListBody = `
     },
     {
       "created_at": "2019-08-07T14:40:00.095712+00:00",
-      "enabled": false,
       "isystem_uuid": "11e0c25d-80ff-4cdb-b20d-eac604469a87",
       "links": [
         {
@@ -78,7 +74,6 @@ const NTPListBody = `
 const NTPSingleBody = `
 {
       "created_at": "2019-08-07T14:40:00.095712+00:00",
-      "enabled": false,
       "isystem_uuid": "11e0c25d-80ff-4cdb-b20d-eac604469a87",
       "links": [
         {

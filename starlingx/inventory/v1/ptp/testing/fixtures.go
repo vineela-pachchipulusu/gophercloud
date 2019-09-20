@@ -16,7 +16,6 @@ var (
 	updatedAt = "2019-08-10T14:40:00.136864+00:00"
 	PTPHerp   = ptp.PTP{
 		ID:        "3d9e9e37-117f-4e04-8141-2e467a6dd3ea",
-		Enabled:   true,
 		Mode:      "hardware",
 		Transport: "l2",
 		Mechanism: "e2e",
@@ -26,7 +25,6 @@ var (
 	}
 	PTPDerp = ptp.PTP{
 		ID:        "d87feed9-e351-40fc-8356-7bf6a59750ea",
-		Enabled:   false,
 		Mode:      "software",
 		Transport: "l1",
 		Mechanism: "e2e",
@@ -41,7 +39,6 @@ const PTPListBody = `
   "ptps": [
     {
       "created_at": "2019-08-07T14:40:00.136864+00:00",
-      "enabled": true,
       "isystem_uuid": "5af5f7e5-1eea-4e76-b539-ac552e132e47",
       "links": [
         {
@@ -61,7 +58,6 @@ const PTPListBody = `
     },
     {
       "created_at": "2019-08-07T14:40:00.136864+00:00",
-      "enabled": false,
       "isystem_uuid": "8f4b1965-fede-4cbd-baca-7e7a8b00c529",
       "links": [
         {
@@ -86,7 +82,6 @@ const PTPListBody = `
 const PTPSingleBody = `
 {
     "created_at": "2019-08-07T14:40:00.136864+00:00",
-    "enabled": false,
     "isystem_uuid": "8f4b1965-fede-4cbd-baca-7e7a8b00c529",
     "links": [
         {
