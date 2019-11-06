@@ -27,7 +27,7 @@ func TestGetLicense(t *testing.T) {
 	defer th.TeardownHTTP()
 	HandleLicenseGetSuccessfully(t)
 
-	expected := licenses.License{Content:license1}
+	expected := licenses.License{Content: license1}
 
 	client := client.ServiceClient()
 	actual, err := licenses.Get(client).Extract()
