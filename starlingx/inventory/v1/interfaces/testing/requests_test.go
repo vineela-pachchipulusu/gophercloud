@@ -90,6 +90,7 @@ func TestCreateInterface(t *testing.T) {
 	interfaceVFCount := 1
 	interfaceUses := []string{}
 	interfaceUsers := []string{}
+	ptpRole := interfaces.PTPRoleMaster
 	actual, err := interfaces.Create(client.ServiceClient(), interfaces.InterfaceOpts{
 		HostUUID:         &interfaceHostID,
 		Type:             &interfaceType,
@@ -110,6 +111,7 @@ func TestCreateInterface(t *testing.T) {
 		VFCount:          &interfaceVFCount,
 		Uses:             &interfaceUses,
 		UsesModify:       &interfaceUsers,
+		PTPRole:          &ptpRole,
 	}).Extract()
 	th.AssertNoErr(t, err)
 
