@@ -27,12 +27,13 @@ func TestListInterfaces(t *testing.T) {
 			return false, err
 		}
 
-		if len(actual) != 3 {
-			t.Fatalf("Expected 3 interfaces, got %d", len(actual))
+		if len(actual) != 4 {
+			t.Fatalf("Expected 4 interfaces, got %d", len(actual))
 		}
 		th.CheckDeepEquals(t, InterfaceHerp, actual[0])
 		th.CheckDeepEquals(t, InterfaceDerp, actual[1])
 		th.CheckDeepEquals(t, InterfaceMerp, actual[2])
+		th.CheckDeepEquals(t, InterfaceBerp, actual[3])
 
 		return true, nil
 	})
