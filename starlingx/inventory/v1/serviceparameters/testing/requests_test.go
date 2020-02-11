@@ -78,8 +78,8 @@ func TestCreateServiceParameter(t *testing.T) {
 	HandleServiceParameterCreationSuccessfully(t, ServiceParameterCreateBody)
 
 	serviceParamService := "bbq"
-	serviceParamSection := "brickets"
-	resource := "bbq::brickets::charcoal::mode"
+	serviceParamSection := "briquettes"
+	resource := "bbq::briquettes::charcoal::mode"
 	params := make(map[string]string)
 	params["charcoal"] = "enabled"
 	actual, err := serviceparameters.Create(client.ServiceClient(), serviceparameters.ServiceParameterOpts{
