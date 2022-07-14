@@ -60,7 +60,7 @@ type Memory struct {
 
 	// VM1GHugepagesEnabled indicates whether VM instances are able to use
 	// 1G hugepages.
-	VM1GHugepagesEnabled string `json:"vm_hugepages_use_1G"`
+	VM1GHugepagesEnabled bool `json:"vm_hugepages_use_1G"`
 
 	// VM1GHugepagesPending indicates whether there is a change pending to the
 	// current number of 1G hugepages allocated for VM usage.
@@ -77,10 +77,6 @@ type Memory struct {
 	// VM2MHugepagesCount represents the current number of 2M pages allocated
 	// for VM instance usage.
 	VM2MHugepagesCount int `json:"vm_hugepages_nr_2M"`
-
-	// VM2MHugepagesEnabled indicates whether VM instances are able to use
-	// 2M hugepages.
-	VM2MHugepagesEnabled string `json:"vm_hugepages_use_2M"`
 
 	// VM2MHugepagesPending indicates whether there is a change pending to the
 	// current number of 2M hugepages allocated for VM usage.
