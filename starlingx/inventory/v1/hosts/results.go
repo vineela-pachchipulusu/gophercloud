@@ -203,7 +203,7 @@ type Host struct {
 	MaxCPUMhzConfigured string `json:"max_cpu_mhz_configured,omitempty"`
 
 	// AppArmor is the security model on the host
-	AppArmor string `json:"apparmor,omitempty" mapstructure:"apparmor"`
+	AppArmor string `json:"apparmor,omitempty"`
 }
 
 // HostPage is the page returned by a pager when traversing over a
