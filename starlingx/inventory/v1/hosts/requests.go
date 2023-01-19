@@ -31,6 +31,7 @@ type HostOpts struct {
 	ClockSynchronization *string       `json:"clock_synchronization,omitempty" mapstructure:"clock_synchronization"`
 	Action               *string       `json:"action,omitempty" mapstructure:"action"`
 	MaxCPUMhzConfigured  *string       `json:"max_cpu_mhz_configured,omitempty" mapstructure:"max_cpu_mhz_configured"`
+	AppArmor             *string       `json:"apparmor,omitempty" mapstructure:"apparmor"`
 }
 
 const (

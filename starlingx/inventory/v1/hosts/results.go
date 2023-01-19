@@ -201,6 +201,9 @@ type Host struct {
 
 	//MaxCPUMhzConfigured is the max limit of the CPU Mhz configured on the host.
 	MaxCPUMhzConfigured string `json:"max_cpu_mhz_configured,omitempty"`
+
+	// AppArmor is the security model on the host
+	AppArmor string `json:"apparmor,omitempty" mapstructure:"apparmor"`
 }
 
 // HostPage is the page returned by a pager when traversing over a
