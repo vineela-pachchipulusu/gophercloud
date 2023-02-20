@@ -32,6 +32,7 @@ type HostOpts struct {
 	Action               *string       `json:"action,omitempty" mapstructure:"action"`
 	MaxCPUMhzConfigured  *string       `json:"max_cpu_mhz_configured,omitempty" mapstructure:"max_cpu_mhz_configured"`
 	AppArmor             *string       `json:"apparmor,omitempty" mapstructure:"apparmor"`
+	HwSettle             *string       `json:"hw_settle,omitempty" mapstructure:"hw_settle"`
 }
 
 const (

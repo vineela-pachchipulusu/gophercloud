@@ -204,6 +204,9 @@ type Host struct {
 
 	// AppArmor is the security model on the host
 	AppArmor string `json:"apparmor,omitempty"`
+
+	// HwSettle defines the wait time for SCSI devices to show up.
+	HwSettle string `json:"hw_settle,omitempty"`
 }
 
 // HostPage is the page returned by a pager when traversing over a
