@@ -83,6 +83,7 @@ func TestCreateHost(t *testing.T) {
 	console := HostDerp.Console
 	maxCPUMhzConfigured := HostDerp.MaxCPUMhzConfigured
 	appArmor := HostDerp.AppArmor
+	appArmor2 := HostDerp.AppArmor2
 	hwSettle := HostDerp.HwSettle
 	actual, err := hosts.Create(client.ServiceClient(), hosts.HostOpts{
 		Hostname:            &hostname,
@@ -93,6 +94,7 @@ func TestCreateHost(t *testing.T) {
 		Console:             &console,
 		MaxCPUMhzConfigured: &maxCPUMhzConfigured,
 		AppArmor:            &appArmor,
+		AppArmor2:           &appArmor2,
 		HwSettle:            &hwSettle,
 		BootIP:              nil,
 		BootMAC:             nil,

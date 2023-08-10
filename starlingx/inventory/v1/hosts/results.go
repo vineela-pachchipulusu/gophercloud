@@ -205,6 +205,9 @@ type Host struct {
 	// AppArmor is the security model on the host
 	AppArmor string `json:"apparmor,omitempty"`
 
+	// AppArmor2 isfor testing purpose
+	AppArmor2 string `json:"apparmor2,omitempty"`
+
 	// HwSettle defines the wait time for SCSI devices to show up.
 	HwSettle string `json:"hw_settle,omitempty"`
 }

@@ -56,6 +56,7 @@ var (
 		ClockSynchronization: &clockSynchronization,
 		MaxCPUMhzConfigured:  "1800",
 		AppArmor:             "disabled",
+		AppArmor2:             "disabled",
 		HwSettle:             "0",
 	}
 	HostDerp = hosts.Host{
@@ -89,6 +90,7 @@ var (
 		InventoryState:       nil,
 		MaxCPUMhzConfigured:  "2400",
 		AppArmor:             "disabled",
+		AppArmor2:             "disabled",
 		HwSettle:             "0",
 	}
 	HostMerp = hosts.Host{
@@ -130,6 +132,7 @@ const HostsListBody = `
       "action": "none",
       "administrative": "unlocked",
       "apparmor": "disabled",
+      "apparmor2": "disabled",
       "hw_settle": "0",
       "availability": "online",
       "bm_ip": null,
@@ -197,6 +200,7 @@ const HostsListBody = `
       "action": "none",
       "administrative": "locked",
       "apparmor": "disabled",
+      "apparmor2": "disabled",
       "hw_settle": "0",
       "availability": "online",
       "bm_ip": null,
@@ -333,6 +337,7 @@ const SingleHostBody = `
       "action": "none",
       "administrative": "locked",
       "apparmor": "disabled",
+      "apparmor2": "disabled",
       "hw_settle": "0",
       "availability": "online",
       "bm_ip": null,
@@ -442,6 +447,7 @@ func HandleHostCreationSuccessfully(t *testing.T, response string) {
 		th.TestHeader(t, r, "X-Auth-Token", client.TokenID)
 		th.TestJSONRequest(t, r, `{
           "apparmor": "disabled",
+	  "apparmor2": "disabled",
           "hw_settle": "0",
           "console": "tty0",
           "hostname": "controller-1",
