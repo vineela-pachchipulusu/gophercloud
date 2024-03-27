@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: Apache-2.0 */
-/* Copyright(c) 2019 Wind River Systems, Inc. */
+/* Copyright(c) 2019-2024 Wind River Systems, Inc. */
 
 package testing
 
@@ -15,24 +15,26 @@ import (
 
 var (
 	NetworkHerp = networks.Network{
-		UUID:      "f30e3a13-addf-4a8e-8854-43c8e477d10d",
-		ID:        1,
-		Name:      "Herp",
-		Type:      "mgmt",
-		Dynamic:   true,
-		PoolUUID:  "5a74726d-5e8a-4396-8ae1-f19779fbcf4f",
-		CreatedAt: "",
-		UpdatedAt: nil,
+		UUID:              "f30e3a13-addf-4a8e-8854-43c8e477d10d",
+		ID:                1,
+		Name:              "Herp",
+		Type:              "mgmt",
+		PrimaryPoolFamily: networks.IPv6Family,
+		Dynamic:           true,
+		PoolUUID:          "5a74726d-5e8a-4396-8ae1-f19779fbcf4f",
+		CreatedAt:         "",
+		UpdatedAt:         nil,
 	}
 	NetworkDerp = networks.Network{
-		UUID:      "f757b5c7-89ab-4d93-bfd7-a97780ec2c1e",
-		ID:        2,
-		Name:      "Derp",
-		Type:      "oam",
-		Dynamic:   false,
-		PoolUUID:  "c7ac5a0c-606b-4fe0-9065-28a8c8fb78cc",
-		CreatedAt: "",
-		UpdatedAt: nil,
+		UUID:              "f757b5c7-89ab-4d93-bfd7-a97780ec2c1e",
+		ID:                2,
+		Name:              "Derp",
+		Type:              "oam",
+		PrimaryPoolFamily: networks.IPv4Family,
+		Dynamic:           false,
+		PoolUUID:          "c7ac5a0c-606b-4fe0-9065-28a8c8fb78cc",
+		CreatedAt:         "",
+		UpdatedAt:         nil,
 	}
 )
 
@@ -45,6 +47,7 @@ const NetworkListBody = `
           "name": "Herp",
           "pool_uuid": "5a74726d-5e8a-4396-8ae1-f19779fbcf4f",
           "type": "mgmt",
+          "primary_pool_family": "ipv6",
           "uuid": "f30e3a13-addf-4a8e-8854-43c8e477d10d"
         },
         {
@@ -53,6 +56,7 @@ const NetworkListBody = `
           "name": "Derp",
           "pool_uuid": "c7ac5a0c-606b-4fe0-9065-28a8c8fb78cc",
           "type": "oam",
+          "primary_pool_family": "ipv4",
           "uuid": "f757b5c7-89ab-4d93-bfd7-a97780ec2c1e"
         }
     ]
@@ -66,6 +70,7 @@ const SingleNetworkBody = `
     "name": "Derp",
     "pool_uuid": "c7ac5a0c-606b-4fe0-9065-28a8c8fb78cc",
     "type": "oam",
+    "primary_pool_family": "ipv4",
     "uuid": "f757b5c7-89ab-4d93-bfd7-a97780ec2c1e"
 }
 `

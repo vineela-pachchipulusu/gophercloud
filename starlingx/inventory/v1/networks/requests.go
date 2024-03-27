@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: Apache-2.0 */
-/* Copyright(c) 2019-2023 Wind River Systems, Inc. */
+/* Copyright(c) 2019-2024 Wind River Systems, Inc. */
 
 package networks
 
@@ -19,11 +19,17 @@ const (
 	AllocationOrderStatic  = "static"
 )
 
+const (
+	IPv4Family = "ipv4"
+	IPv6Family = "ipv6"
+)
+
 type NetworkOpts struct {
 	Name     *string `json:"name,omitempty" mapstructure:"name"`
 	Type     *string `json:"type,omitempty" mapstructure:"type"`
 	Dynamic  *bool   `json:"dynamic,omitempty" mapstructure:"dynamic"`
 	PoolUUID *string `json:"pool_uuid,omitempty" mapstructure:"pool_uuid"`
+	// The 'primary_pool_family' is not a POSTable / PATCHable parameter.
 }
 
 // ListOptsBuilder allows extensions to add additional parameters to the

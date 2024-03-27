@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: Apache-2.0 */
-/* Copyright(c) 2019 Wind River Systems, Inc. */
+/* Copyright(c) 2019-2024 Wind River Systems, Inc. */
 
 package networks
 
@@ -58,6 +58,10 @@ type Network struct {
 
 	// Pool UUID is a reference to the underlying address pool resource.
 	PoolUUID string `json:"pool_uuid"`
+
+	// PrimaryPoolFamily indicates whether the primary stack is of "ipv4" or "ipv6" family.
+	// The value can either be "ipv4" or "ipv6".
+	PrimaryPoolFamily string `json:"primary_pool_family"`
 
 	// CreatedAt defines the timestamp at which the resource was created.
 	CreatedAt string `json:"created_at"`
