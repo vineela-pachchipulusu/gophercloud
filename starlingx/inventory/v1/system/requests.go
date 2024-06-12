@@ -6,21 +6,21 @@ package system
 import (
 	"errors"
 	"fmt"
+
 	"github.com/gophercloud/gophercloud"
 	"github.com/gophercloud/gophercloud/pagination"
 	common "github.com/gophercloud/gophercloud/starlingx"
 )
 
 type SystemOpts struct {
-	Name         *string `json:"name,omitempty" mapstructure:"name"`
-	Description  *string `json:"description,omitempty" mapstructure:"description"`
-	Location     *string `json:"location,omitempty" mapstructure:"location"`
-	Latitude     *string `json:"latitude,omitempty" mapstructure:"latitude"`
-	Longitude    *string `json:"longitude,omitempty" mapstructure:"longitude"`
-	Contact      *string `json:"contact,omitempty" mapstructure:"contact"`
-	HTTPSEnabled *string `json:"https_enabled,omitempty" mapstructure:"https_enabled"`
-	SDNEnabled   *string `json:"sdn_enabled,omitempty" mapstructure:"sdn_enabled"`
-	VSwitchType  *string `json:"vswitch_type,omitempty" mapstructure:"vswitch_type"`
+	Name        *string `json:"name,omitempty" mapstructure:"name"`
+	Description *string `json:"description,omitempty" mapstructure:"description"`
+	Location    *string `json:"location,omitempty" mapstructure:"location"`
+	Latitude    *string `json:"latitude,omitempty" mapstructure:"latitude"`
+	Longitude   *string `json:"longitude,omitempty" mapstructure:"longitude"`
+	Contact     *string `json:"contact,omitempty" mapstructure:"contact"`
+	SDNEnabled  *string `json:"sdn_enabled,omitempty" mapstructure:"sdn_enabled"`
+	VSwitchType *string `json:"vswitch_type,omitempty" mapstructure:"vswitch_type"`
 }
 
 // ListOptsBuilder allows extensions to add additional parameters to the

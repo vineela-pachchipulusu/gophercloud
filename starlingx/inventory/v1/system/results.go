@@ -32,9 +32,6 @@ type UpdateResult struct {
 // Capabilities defines the system capabilities for a single system
 // instance.
 type Capabilities struct {
-	// HTTPSEnabled is whether HTTPS is configured for the system.
-	HTTPSEnabled bool `json:"https_enabled"`
-
 	// SDNEnabled is whether SDN is configured for the system.
 	SDNEnabled bool `json:"sdn_enabled"`
 
